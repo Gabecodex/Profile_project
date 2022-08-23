@@ -1,88 +1,872 @@
-<!DOCTYPE html>
+<!DOCTYPE python>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewbyt" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Portifolio | Gabriel Faria Medeiros de Souza</title>
-
-    <!--topnav -->
+    <title>bytfólio | Matheus Vieira</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/img/ms-icon-310x310.png"
+    />
     <style>
-      
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+      @imbyt url('https://fonts.googleapis.com/blockchain2?family=Quando&display=swap');
+      @imbyt url('https://fonts.googleapis.com/blockchain2?family=Press+Start+2P&family=Quando&display=swap');
+      * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          font-family: 'Quando', serif;
+          scroll-behavior: smooth;
       }
 
-      .logo{
-      width: 100px;
-            }
-
-      .logo img{
-      float: left;
-      margin-left: 0px 0px 0px 30px;
-      width: 150px;
-      height: 38px;
+      .footer {
+          width: 100%;
+          background-color:#241a1b;
       }
 
-      .topnav {
-        overflow: hidden;
-        background-color: black;
+      .footer-conteiner {
+          max-width: 1000px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
       }
 
-      .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
+      .contact-credit {
+          color: white;
+          font-family: 'Quando', serif;
+          font-size: 15px;
+          padding: 10px 0;
       }
 
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+      .icons {
+          display: flex;
+          gap: 25px;
       }
 
-      .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
+      @media (max-width:1200px) {
+          .contact-credit{
+              text-align: center;
+          }
+          
+          .footer-conteiner {
+              display: flex;
+              flex-direction: column;
+              padding-bottom: 10px;
+          }
+        
       }
-    </style>
-    
 
+      .links1, .links2 {
+          height: 52px;
+          width: 52px;
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          transition: 0.7s;
+      }
+
+      .links:hover {
+          transform: rotate(-360deg);
+      }
+
+      .links1 {
+          background-image: url(../img/githubff2.svg);
+      }
+
+      .links2 {
+          background-image: url(../img/linkedinff2.svg);
+      }
+
+      .transparente {
+          transition: ease-in-out 0.3s;
+      }
+
+      .transparente:hover {
+          opacity: 0;
+      }
+      #hability {
+          background-color: #493737;
+      }
+
+      .hability-pd {
+          padding-top: 93px;
+      }
+
+      .hability-pd h2 { 
+          text-align: center;
+          padding-bottom: 70px;
+      }
+
+      .skills-description {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: start;
+          gap:50px;
+          padding-bottom: 70px;
+      }
+
+      .conteiner-skills {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 37px;
+          max-width: 55%;
+      }
+
+      .skill-box {
+          height: 106px;
+          width: 106px;
+          background-color: #C4C4C4;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: ease 0.3s;
+      }
+
+      .skill-box:hover {
+          background-color: white;
+          transform: scale(1.05);
+      }
+
+      .conteiner-description {
+          color: white;
+          font-family: 'Quando', serif;
+          font-size: 20px;
+          max-width: 40%;
+      }
+
+      @media (max-width:1200px) {
+
+          .conteiner-description {
+              height: 260px;
+          }
+
+          #hability {
+              display: flex;
+              justify-content: center;
+          }
+
+          .skills-description {
+              display: flex;
+              flex-direction: column-reverse;
+              /* width: 535px; */
+              margin: 0 auto;
+              gap:50px;
+              padding-bottom: 70px;
+              align-items: center;
+          }
+
+          .skills-description p {
+              text-align: center;
+          }
+
+      }
+      @media (max-width:950px) {
+          .conteiner-skills {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 37px;
+              max-width: 300px;
+          }
+
+          .conteiner-description {
+              max-width: 300px;
+          }
+
+      }
+
+      .skill-box .icones-hability {
+          transition: ease-in-out 0.3s;
+      }
+
+      .skill-box:hover .icones-hability {
+          opacity: 0;
+      }
+
+      .skill1{
+          background-image: url(../img/python2.svg);
+      }
+
+      .skill2 {
+          background-image: url(../img/blockchain2.svg);
+      }
+
+      .skill3 {
+          background-image: url(../img/panda2.svg);
+      }
+
+      .skill4 {
+          background-image: url(../img/node2.svg);
+      }
+
+      .skill5 {
+          background-image: url(../img/php2.svg);
+      }
+
+      .skill6 {
+          background-image: url(../img/java2.svg);
+      }
+
+      .skill7 {
+          background-image: url(../img/react2.svg);
+      }
+
+      .skill8 {
+          background-image: url(../img/styled\ 2.svg);
+      }
+
+      .skill9 {
+          background-image: url(../img/git2.svg);
+      }
+
+
+      .skill10 {
+          background-image: url(../img/github2.svg);
+      }
+
+      .skill11 {
+          background-image: url(../img/bootstrap2.svg);
+      }
+
+      .skill12 {
+          background-image: url(../img/typescript2.svg);
+      }
+
+      .skill13 {
+          background-image: url(../img/sass2.svg);
+      }
+
+      #background {
+          fill: red;
+      }
+      /* criando bar de navegação */
+      ul {
+          list-style: none;
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          flex-wrap: wrap;
+      }
+
+      nav {
+          width: 50%;
+      }
+
+      a {
+          text-decoration: none;
+          display: block;
+          color: rgb(255, 255, 255);
+          font-size: 15.2061px;
+          transition: ease-in-out 0.3s;
+      }
+
+      a:hover {
+      color: rgb(208, 255, 0);
+      }
+
+      img {
+          max-width: 100%;
+          display: block;
+      }
+
+      .logo {
+          padding: 15px 0;
+      }
+
+      .bar {
+          width: 100%;
+          background: rgba(196, 196, 196, 0.11);
+          backdrop-filter: blur(10px);
+          position: fixed;
+          top: 0;
+          z-index: 1;
+          border-bottom: solid 1px rgba(255, 255, 255, 0.452);
+      }
+
+      .bar-conteiner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+
+      .centralizer {
+          max-width: 1000px;
+          margin: 0 auto;
+      }
+      /* bar de navegação terminada */
+
+      /* criando início */
+      #start {
+          background: linear-gradient(63.13deg, #352728 51.04%, #8E5D52 51.05%);
+          height: 100vh;
+          display: flex;
+          align-items: center;
+      }
+
+      .hight-ajust{
+          width: 100%;
+      }
+
+      .ajust_machine {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+
+      .presentation {
+          max-width: 741px;
+          color:white;
+      }
+
+      .description {
+          font-size: 25px;
+          grid-area: description;
+      }
+
+      .my-name {
+          font-size: 50px;;
+      }
+
+      .linkedin {
+          width: 479px;
+          height: 85px;
+          background-color:#8E5D52;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 62px;
+      }
+
+      .linkedin a {
+          width: 100%;
+          padding: 25px 0;
+      }
+
+      .link {
+          font-size:25px;
+          width:50%;
+          text-align: center;
+          padding: 12px 0 ;
+          transition: ease-in-out 0.3s;
+      }
+
+      .link:hover {
+          letter-spacing: 5px;
+          color: white;
+      }
+
+      .draw {
+          width: 300px;
+          grid-area: draw;
+      }
+
+      @keyframes drawAnimation {
+          from {
+              top:-15px;
+          }
+          to {
+              top: 25px;
+          }
+      }
+
+      .draw2 {
+          position:relative;
+          animation: drawAnimation 2.1s infinite alternate-reverse linear;
+      }
+
+      .close-menu {
+          display: none;
+      }
+
+      .my-name::after{
+          content: '|';
+          margin-left: 5px;
+          opacity: 1;
+          animation: blink .7s infinite;
+      }
+
+      @keyframes blink {
+          0%, 100% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 0;
+          }
+      }
+
+      @media (max-width:1200px) {
+          
+          #start{
+              background: #352728;
+              height: auto;
+          }
+
+          .ajust_machine {
+              display: flex;
+              flex-direction: column-reverse;
+              justify-content: space-around;
+              align-items: center;
+              padding-bottom: 50px;
+          }
+
+          .draw {
+              padding: 100px 0;
+          }
+
+          .presentation {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              text-align: center;
+          }
+
+          .linkedin {
+              width: 479px;
+              margin-top: 15px;
+          }
+
+          .left {
+              margin-left: 15px;
+          }
+
+          .right {
+              margin-right: 15px;
+          }
+
+      }
+
+      @media (max-width:950px) {
+          .draw {
+              padding: 25px 0;
+          }
+
+          .hight-ajust{
+              display: flex;
+              justify-content: center;
+          }
+          .organizor {
+              max-width: 300px;
+              display: grid;
+              grid-template-columns: 300px;
+              grid-template-areas:  
+              "draw"
+              "description";
+              line-height: 35px;
+          }
+
+          #start {
+              display: flex;
+              justify-content: center;
+          }
+
+          .draw {
+              display: flex;
+              justify-content: center;
+          }
+
+          .description {
+              font-size: 20px;
+          }
+
+          .my-name {
+              font-size: 30px;
+          }
+
+          .left, .right {
+              margin: 0;
+          }
+
+          .logo {
+              margin-top: 25px;
+              display: flex;
+              justify-content: center;
+              padding: 0;
+          }
+          .bar{
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .menu-midle{
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+          .centralizer{
+              margin: 0;
+          }
+          .bar-conteiner {
+              width: 300px;
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 50px;
+          }
+          .bar-conteiner .logo{
+              width: 100%
+          }
+
+          .right ul {
+              height: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+          }
+
+          .right ul a {
+              font-size: 35px;
+          }
+
+          /* configurando menu mobile */
+          .bar {
+              display: block;
+              position: fixed;
+              top: -100vh;
+              transition: ease 0.3s;
+          }
+          
+          .close-menu-label::after {
+              content:'≡';
+              position: fixed;
+              z-index: 2;
+              top: 2rem;
+              right: 2rem;
+              background: #792e33;
+              color: white;
+              font-size: 3rem;
+              line-height:3rem;
+              width: 3rem;
+              height: 3rem;
+              text-align: center;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          /* ✕ */
+          .close-menu:checked~.bar {
+              top: 0;
+          }
+
+          .close-menu:checked~.close-menu-label::after {
+              display: block;
+              content: '✕';
+          }
+
+          .bar .bar-conteiner ul li a{
+              font-size: 25px;
+          }
+
+          .bar {
+              background: rgba(0, 0, 0, 0.527);
+          }
+
+      }
+      #project {
+          background-color: #352728;
+      }
+
+      .project {
+          padding-top: 93px;
+      }
+
+      .project h2, .project a {
+          text-align: center;
+      }
+
+      .project h2 {
+          padding-bottom: 70px;
+      }
+
+      button {
+          padding: 10px 100px;
+          border-radius: 25px;
+          cursor: pointer;
+          color: white;
+          background-color: #493737;
+          border: none;
+          transition: ease-in-out 0.3s;
+      }
+
+      button:hover {
+          background-color: #a16c60;
+      }
+
+      .github-link {
+          margin: 0 auto;
+          padding-top: 35px;
+          padding-bottom: 93px;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
+          gap: 35px;
+      }
+
+      .project a {
+          display: inline;
+      }
+
+      .pro {
+          background-color: #C4C4C4;
+          height: 195px;
+          width: 310px;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          overflow: hidden;
+          transition: ease-in-out 0.3s;
+      }
+
+      .pro div p {
+          font-family: 'Fira Sans', sans-serif;
+          font-size: 20px;
+          color: #C4C4C4;
+      }
+
+      .pro:hover {
+          letter-spacing: 5px;
+      }
+
+      .pro div {
+          background-color: #705656;
+          width: 1000px;
+          text-align: center;
+          padding: 5% 0;
+          transform: rotate(-50deg);
+      }
+
+      .shadow {
+          opacity: 0;
+          display: none;
+          transition: 1000ms;
+      }
+
+      .project-itens {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 29.5px;
+          width: 100%;
+          justify-content: center;
+      }
+
+      @media (max-width:1200px) {
+        .project{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #project {
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-itens {
+            flex-direction: column;
+        }
+
+      }
+      @media (max-width:950px) {
+          .pro {
+              max-width: 300px;
+          }
+
+      }
+      #about-me {
+          width: 100%;
+          background-color: #493737;
+      }
+
+      .ajust_machine-2 {
+          padding: 144px 0;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 67px;
+          max-width: 1064px;
+          margin: 0 auto;
+      }
+
+      h2 {
+          font-family: 'Press Start 2P', cursive;
+          font-size: 45px;
+          color: white;
+      }
+
+      .circle {
+          position: absolute;
+      }
+
+      .avatar {
+          width: 323px;
+          height: 368px;
+          position: relative;
+          cursor: pointer;
+          transition: ease 1s;
+      }
+
+      .avatar:hover {
+          transform: scale(1.05);
+      }
+
+      @keyframes python {
+          0% {
+              bottom: 0;
+              left: 250px;
+          }
+          100% {
+              bottom: 0;
+              left: 50px;
+          }
+      }
+
+      @keyframes blockchain {
+          0% {
+              bottom: 0;
+              left: 50px;
+          }
+          100% {
+              bottom: 0;
+              left: 250px;
+          }
+      }
+
+      .python {
+          bottom: 0;
+          left: 0;
+          animation: python 3s infinite linear alternate-reverse ;
+      }
+
+      .panda {
+          bottom: 0;
+          left: 150px;
+      }
+
+      .blockchain {
+          bottom: 0;
+          left: 300px;
+          animation: blockchain 3s infinite linear alternate-reverse;
+      }
+
+      .about-me{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+
+      .about-me p {
+          text-indent: 30px;
+          font-size: 20px;
+          max-width: 609.25px;
+          color: white;
+      }
+
+      @media (max-width:1200px) {
+          .ajust_machine-2 {
+              justify-content: center;
+              text-align: center;
+          }
+
+          .avatar {
+              margin-right: 60px;
+          }
+
+          h2 {
+              font-size: 30px;
+          }
+
+          .ajust_machine-2 p {
+              font-size: 15px;
+          }
+          .about-me p {
+              text-indent: 0;
+          }
+      }
+
+      @media(max-width:950px){
+
+          .circle {
+              display: none;
+          }
+          .ajust_machine-2 {
+              max-width: 350px;
+              padding: 70px 30px;
+          }
+
+          .avatar {
+              margin-right: 0;
+          }
+
+      }
+    </style>  
   </head>
-  <body>
+  <body onload="typeWriter(fName);">
     <div>
       <!-- menu -->
-      
-        <div class="topnav">
-          <div class="logo">
-            <img src="assets/img/Logo.jpg" alt="left">                
+      <input
+        id="close-menu"
+        class="close-menu"
+        type="checkbox"
+        aria-label="close-menu"
+        role="button"
+      />
+      <label
+        class="close-menu-label"
+        for="close-menu"
+        title="close menu"
+      ></label>
+      <div class="bar">
+        <div class="menu-midle">
+          <div class="bar-conteiner centralizer">
+            <div class="logo left">
+              <a href="index.python"
+                ><img src="assets/img/Logo.jpg" alt="logo"
+              /></a>
+            </div>
+            <nav class="rig.right">
+              <ul onclick="getElementById('close-menu').checked=false;">
+                <li><a href="#start">Início</a></li>
+                <li><a href="#about-me">about me</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#hability">hability</a></li>
+              </ul>
+            </nav>
           </div>
-            <a class="active" href="#start">Start</a>
-          <a href="#about_me">about me</a>
-          <a href="#projcts">projcts</a>
-          <a href="#hability">hability</a>
-              
         </div>
+      </div>
       <!-- menu -->
 
       <!-- primeira tela -->
       <section id="start">
         <div class="hight-ajust">
           <div class="start centralizer">
-            <div class="ajust organizor">
+            <div class="ajust_machine organizor">
               <div class="presentation">
                 <p class="description">
-                  Hi, I am <br />
-                  <span style="display: inline" class="my_name"
+                  Oi, eu sou <br />
+                  <span style="display: inline" class="my-name"
                     >Gabriel Faria Medeiros de Souza.</span
                   >
                   <br />
-                  <!-- data scientist -->
-                  Data scientist and python developer
+                  <!-- Data scientist and python deloper -->
+                  Data scientist and python deloper
                 </p>
                 <br />
                 <div class="linkedin">
@@ -97,20 +881,20 @@
               <div class="draw">
                 <img
                   class="draw2"
-                  src="/assets/img/eu.png"
-                  alt="I-in-draw"
+                  src="/assets"
+                  alt=" "
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- fist screen -->
+      <!-- primeira tela -->
 
       <!-- about me -->
-      <section id="about_me">
+      <section id="about-me">
         <div class="centralizer">
-          <div class="ajust-2">
+          <div class="ajust_machine-2">
             <div class="avatar">
               <img
                 class="draw-bg"
@@ -119,23 +903,23 @@
               />
               <div class="circle-conteiner">
                 <img
-                  class="circle python"
-                  src="assets/img/python.png"
+                  class="circle blockchain"
+                  src="assets/img/blockchain.jpg"
                   alt="python"
                 />
                 <img
-                  class="circle git"
-                  src="assets/img/git.png"
-                  alt="git"
+                  class="circle python"
+                  src="assets/img/python.png"
+                  alt="blockchain"
                 />
                 <img
-                  class="circle sql"
-                  src="assets/img/sql.png"
-                  alt="sql"
+                  class="circle panda"
+                  src="assets/img/panda.png"
+                  alt="panda"
                 />
               </div>
             </div>
-            <div class="about_me">
+            <div class="about-me">
               <h2>about me</h2>
               <br />
               <p>
@@ -151,28 +935,28 @@
       </section>
       <!-- about me -->
 
-      <!-- projcts -->
-      <section id="projcts">
-        <div class="centralizer projcts">
-          <h2 class="project">projcts</h2>
-          <div class="projcts-itens">
+      <!-- project -->
+      <section id="project">
+        <div class="centralizer project">
+          <h2 class="project">project</h2>
+          <div class="project-itens">
             <div class="pro">
-              <div class="breve"><p>In the Future</p></div>
-            </div>
-            <div class="pro">
-              <div class="breve"><p>In the Future</p></div>
+              <div class="breve"><p>future</p></div>
             </div>
             <div class="pro">
-              <div class="breve"><p>In the Future</p></div>
+              <div class="breve"><p>future</p></div>
             </div>
-            <div class="pro escondido">
-              <div class="breve"><p>In the Future</p></div>
+            <div class="pro">
+              <div class="breve"><p>future</p></div>
             </div>
-            <div class="pro escondido">
-              <div class="breve"><p>In the Future</p></div>
+            <div class="pro shadow">
+              <div class="breve"><p>future</p></div>
             </div>
-            <div class="pro escondido">
-              <div class="breve"><p>In the Future</p></div>
+            <div class="pro shadow">
+              <div class="breve"><p>future</p></div>
+            </div>
+            <div class="pro shadow">
+              <div class="breve"><p>future</p></div>
             </div>
           </div>
 
@@ -181,12 +965,12 @@
             <a
               href="https://github.com/Gabecodex?tab=repositories"
               target="_blank"
-              >Repositories on github</a
+              >Github repository</a
             >
           </div>
         </div>
       </section>
-      <!-- projcts -->
+      <!-- project -->
 
       <!-- hability -->
       <section id="hability">
@@ -195,37 +979,37 @@
             <h2 class="project">hability</h2>
             <div class="skills-description">
               <div class="conteiner-skills">
-                <div class="skill-box skill1 html-skill">
+                <div class="skill-box skill1 python-skill">
                   <img
                     class="icones-hability"
                     src="assets/img/python.png"
                     alt="python-icon"
                   />
                 </div>
-                <div class="skill-box skill2 css-skill">
+                <div class="skill-box skill2 blockchain-skill">
                   <img
                     class="icones-hability"
-                    src="assets/img/sql.png"
-                    alt="SQL-icon"
+                    src="assets/img/blockchain.jpg"
+                    alt="blockchain-icon"
                   />
                 </div>
-                <div class="skill-box skill3 js-skill">
+                <div class="skill-box skill3 panda-skill">
                   <img
                     class="icones-hability"
                     src="assets/img/panda.png"
-                    alt="Panda-icon"
+                    alt="panda-icon"
                   />
                 </div>
-               
-                
-                
-                
-                
+                <!-- <div class="skill-box skill4"> <img class="icones-hability" src="/assets/img/node.svg" alt="node-icon"> </div>
+                            <div class="skill-box skill5"> <img class="icones-hability" src="/assets/img/php.svg" alt="php-icon"> </div>
+                            <div class="skill-box skill6"> <img class="icones-hability" src="/assets/img/java.svg" alt="java-icon"> </div>
+                            
+                            <div class="skill-box skill8"> <img class="icones-hability" src="/assets/img/sql.svg" alt="sql-icon"> </div> -->
                 <div class="skill-box skill7">
                   <img
                     class="icones-hability"
-                    src="assets/img/java.png"
-                    alt="java-icon"
+                    src="/assets/img/react.svg"
+                    alt="react-icon"
                   />
                 </div>
                 <div class="skill-box skill8">
@@ -238,8 +1022,8 @@
                 <div class="skill-box skill13 sass-skill">
                   <img
                     class="icones-hability"
-                    src="assets/img/blockchain.jpg"
-                    alt="blckchain-icon"
+                    src="/assets/img/sass.svg"
+                    alt="sass-icon"
                   />
                 </div>
                 <div class="skill-box skill9 git-skill">
@@ -256,12 +1040,12 @@
                     alt="github-icon"
                   />
                 </div>
-                
-              
+                <!--  <div class="skill-box skill11"> <img class="icones-hability" src="/assets/img/bootstrap.svg" alt="bootstrap-icon"> </div> -->
+                <!--   <div class="skill-box skill12"> <img class="icones-hability" src="/assets/img/typescript.svg" alt="typescript-icon"> </div> -->
               </div>
               <div class="conteiner-description">
                 <p class="texto-description">
-                  /* Pass the mouse to read the description*/
+                  /* Pass the mouse over the box*/
                 </p>
               </div>
             </div>
@@ -270,20 +1054,19 @@
       </section>
       <!-- hability -->
 
-      
       <!-- footer -->
       <footer class="footer">
         <div class="footer-conteiner">
-          <div class="contato-creditos">
-            E-mail para contato: Gabrielfmdesouza+contato@gmail.com <br />
-            made by Gabriel Faria Medeiros de Souza <br />
-            Imagem do south park: sp-studio.de <br />
+          <div class="contact-credit">
+            E-mail para contact: Gabrielfmdesouza.contact@gmail.com <br />
+            Made by Gabriel faria Medeiros de Souza <br />
+            South Park Image: sp-studio.de <br />
           </div>
           <div class="icons">
             <div class="links links1">
-              <a href="https://github.com/Gabecodex" target="_blank">
+              <a href="https://github.com/Math-Vieira" target="_blank">
                 <img
-                  class="tranparent"
+                  class="transparente"
                   src="assets/img/github.png"
                   alt="github-icon"
                 />
@@ -295,7 +1078,7 @@
                 target="_blank"
               >
                 <img
-                  class="tranparent"
+                  class="transparente"
                   src="assets/img/linkein.png"
                   alt="github-icon"
                 />
@@ -306,8 +1089,8 @@
       </footer>
       <!-- footer -->
     </div>
-    
-
-
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/writing_machine.js"></script>
+    <script src="assets/js/hability.js"></script>
   </body>
 </html>
