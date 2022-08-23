@@ -6,47 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Portifolio | Gabriel Faria Medeiros de Souza</title>
-    <link
-      rel="icon"
-      type=""
-      href=""
-    />
+
+    <!--topnav -->
+    <style>
+      
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .logo{
+      width: 100px;
+            }
+
+      .logo img{
+      float: left;
+      margin-left: 0px 0px 0px 30px;
+      width: 150px;
+      height: 38px;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: black;
+      }
+
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+    </style>
+    
 
   </head>
-  <body onload="typeWriter(fName);">
+  <body>
     <div>
       <!-- menu -->
-      <input
-        id="close-menu"
-        class="close-menu"
-        type="checkbox"
-        aria-label="close-menu"
-        role="button"
-      />
-      <label
-        class="close-menu-label"
-        for="close-menu"
-        title="close menu"
-      ></label>
-      <div class="space_bar">
-        <div class="menu-midle">
-          <div class="space_bar-conteiner centralizer">
-            <div class="side left">
-              <a href="index.html"
-                ><img src="assets/img/Logo.jpg" alt="side" 
-              /></a>
-            </div>
-            <nav class="right">
-              <ul onclick="getElementById('close-menu').checked=false;">
-                <li><a href="#start">Start</a></li>
-                <li><a href="#about_me">about me</a></li>
-                <li><a href="#projcts">projcts</a></li>
-                <li><a href="#hability">hability</a></li>
-              </ul>
-            </nav>
+      
+        <div class="topnav">
+          <div class="logo">
+            <img src="assets/img/Logo.jpg" alt="left">                
           </div>
+            <a class="active" href="#start">Start</a>
+          <a href="#about_me">about me</a>
+          <a href="#projcts">projcts</a>
+          <a href="#hability">hability</a>
+              
         </div>
-      </div>
       <!-- menu -->
 
       <!-- primeira tela -->
